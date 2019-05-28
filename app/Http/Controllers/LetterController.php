@@ -9,30 +9,24 @@ use App\DetailPKL;
 
 class LetterController extends Controller
 {
-    public function index(Type $var = null)
-    {
-        # code...
-    }
 
-    public function suratPKL()
-    {
-        return view('letter.form.kerjaPraktik');
-    }
     public function apply(Request $request)
     {
-        Mahasiswa::create([
+        $mahasiswa = Mahasiswa::create([
             'nama_mahasiswa' => $request->nama,
             'nim' => $request->nim,
-            'program_studi' => $request->prodi,
-            'alamat_mahasiswa' => $request->alamat
+            'kode_prodi' => $request->prodi,
+            'alamat' => $request->alamat
         ]);
 
         switch ($request->type) {
             case 'pkl':
-                DetailPKL::create([
-                    'nama_instansi' => $request->tmp_pkl,
-                    'alamat_instansi' => $request->alm_pkl
+                $detail_pkl = new DetailPKL([
+                    'mahasiswa_id' => $mahasiswa->id,
+                    'nama_instansi' => $request->nama_instansi,
+                    'alamat_instansi' => $request->alamat_instansi
                 ]);
+                $mahasiswa->detailPKL()->save($detail_pkl);
                 break;
             case 'aktif-kuliah':
                 # code...
@@ -46,6 +40,6 @@ class LetterController extends Controller
                 break;
         }
         
-        return redirect('welcome');
+        return view('welcome');
     }
 }

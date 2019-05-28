@@ -26,7 +26,7 @@
 							<div>Isi form dibawah ini secara lengkap.</div>
 							<div>
 								<div class="panel-body">
-									<form class="form-horizontal" action="/letter/apply" method="post">
+									<form class="form-horizontal" action="/pengajuan-surat/apply" method="post">
 										@csrf
 										<fieldset>
 											<div class="form-group">
@@ -86,16 +86,16 @@
 											</div>
 
 											<div class="form-group">
-												<label class="col-md-3 control-label" for="tmp_pkl">Nama Instansi/Lembaga</label>
+												<label class="col-md-3 control-label" for="nama_instansi">Nama Instansi/Lembaga</label>
 												<div class="col-md-6">
-													<input class="form-control" id="tmp_pkl" name="tmp_pkl" placeholder="" rows="5">
+													<input class="form-control" id="nama_instansi" name="nama_instansi" placeholder="" rows="5">
 												</div>
 											</div>
 
 											<div class="form-group">
-												<label class="col-md-3 control-label" for="alm_pkl">Alamat Instansi</label>
+												<label class="col-md-3 control-label" for="alamat_instansi">Alamat Instansi</label>
 												<div class="col-md-6">
-													<textarea class="form-control" id="alm_pkl" name="alm_pkl" placeholder="" rows="5"></textarea>
+													<textarea class="form-control" id="alamat_instansi" name="alamat_instansi" placeholder="" rows="5"></textarea>
 												</div>
 											</div>
 																	

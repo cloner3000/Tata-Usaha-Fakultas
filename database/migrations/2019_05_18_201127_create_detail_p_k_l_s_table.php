@@ -15,10 +15,14 @@ class CreateDetailPKLSTable extends Migration
     {
         Schema::create('detail_pkl', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('mahasiswa_id');
+            $table->unsignedBigInteger('mahasiswa_id');
             $table->string('nama_instansi', 40);
             $table->text('alamat_instansi');
             $table->timestamps();
+
+            $table->foreign('mahasiswa_id')
+                ->references('id')->on('mahasiswa')
+                ->onDelete('cascade');
         });
     }
 
@@ -29,6 +33,6 @@ class CreateDetailPKLSTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('detail_p_k_l_s');
+        Schema::dropIfExists('detail_pkl');
     }
 }

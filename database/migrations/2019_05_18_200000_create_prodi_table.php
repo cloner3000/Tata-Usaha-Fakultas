@@ -14,7 +14,7 @@ class CreateProdiTable extends Migration
     public function up()
     {
         Schema::create('program_studi', function (Blueprint $table) {
-            $table->integer('kode_prodi');
+            $table->string('kode_prodi', 3);
             $table->string('program_studi', 30);
             $table->timestamps();
             $table->primary('kode_prodi');
@@ -28,6 +28,6 @@ class CreateProdiTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('prodi');
+        Schema::dropIfExists('program_studi');
     }
 }

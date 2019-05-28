@@ -8,7 +8,10 @@ class Mahasiswa extends Model
 {
     protected $table = "mahasiswa";
     protected $fillable = [
-        ''
+        'nama_mahasiswa',
+        'nim',
+        'kode_prodi',
+        'alamat'
     ];
 
     public function detailPKL()

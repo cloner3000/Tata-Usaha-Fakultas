@@ -17,9 +17,13 @@ class CreateMahasiswasTable extends Migration
             $table->bigIncrements('id');
             $table->string('nama_mahasiswa');
             $table->integer('nim');
-            $table->char('kode_jurusan', 3);
+            $table->string('kode_prodi', 3);
             $table->text('alamat');
             $table->timestamps();
+
+            $table->foreign('kode_prodi')
+                ->references('kode_prodi')->on('program_studi')
+                ->onDelete('cascade');
         });
     }
 
@@ -30,6 +34,6 @@ class CreateMahasiswasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('mahasiswas');
+        Schema::dropIfExists('mahasiswa');
     }
 }
