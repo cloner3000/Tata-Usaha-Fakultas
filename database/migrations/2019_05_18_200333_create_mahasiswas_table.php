@@ -18,7 +18,10 @@ class CreateMahasiswasTable extends Migration
             $table->string('nama_mahasiswa');
             $table->integer('nim');
             $table->string('kode_prodi', 3);
+            $table->string('semester', 4);
+            $table->date('tanggal_lahir');	
             $table->text('alamat');
+            $table->string('no_telepon', 16);
             $table->timestamps();
 
             $table->foreign('kode_prodi')

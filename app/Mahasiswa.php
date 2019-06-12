@@ -11,7 +11,10 @@ class Mahasiswa extends Model
         'nama_mahasiswa',
         'nim',
         'kode_prodi',
-        'alamat'
+        'semester',
+        'tanggal_lahir',
+        'alamat',
+        'no_telepon'
     ];
 
     public function detailPKL()
