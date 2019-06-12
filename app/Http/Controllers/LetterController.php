@@ -13,10 +13,13 @@ class LetterController extends Controller
     public function apply(Request $request)
     {
         $mahasiswa = Mahasiswa::create([
-            'nama_mahasiswa' => $request->nama,
+            'nama_mahasiswa' => $request->nama_mahasiswa,
             'nim' => $request->nim,
-            'kode_prodi' => $request->prodi,
-            'alamat' => $request->alamat
+            'kode_prodi' => $request->kode_prodi,
+            'semester' => $request->semester,
+            'tanggal_lahir' => $request->tanggal_lahir,
+            'alamat' => $request->alamat,
+            'no_telepon' => $request->no_telepon
         ]);
 
         switch ($request->type) {
@@ -28,7 +31,7 @@ class LetterController extends Controller
                 ]);
                 $mahasiswa->detailPKL()->save($detail_pkl);
                 break;
-            case 'aktif-kuliah':
+            case 'skkb':
                 # code...
                 break;
             case 'izin-penelitian':
