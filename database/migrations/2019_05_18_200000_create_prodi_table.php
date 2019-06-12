@@ -17,6 +17,7 @@ class CreateProdiTable extends Migration
             $table->string('kode_prodi', 3);
             $table->string('program_studi', 30);
             $table->timestamps();
+            
             $table->primary('kode_prodi');
         });
     }
