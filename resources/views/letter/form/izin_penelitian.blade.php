@@ -3,6 +3,7 @@
 @section('page-title', 'Izin Penelitian')
 
 @section('detail-form')
+<input type="hidden" name="tipe-surat" value="izin-penelitian">
 <div class="form-group">
 	<label class="col-md-3 control-label" for="tmp_penelitian">Nama Instansi/Tempat Penelitian</label>
 	<div class="col-md-6">

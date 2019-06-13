@@ -3,6 +3,7 @@
 @section('page-title', 'Pernyataan Masih Kuliah')
 
 @section('detail-form')
+<input type="hidden" name="tipe-surat" value="masih-kuliah">
 <div class="form-group">
 	<label class="col-md-3 control-label" for="nama_ortu">Nama Orang Tua</label>
 	<div class="col-md-6">

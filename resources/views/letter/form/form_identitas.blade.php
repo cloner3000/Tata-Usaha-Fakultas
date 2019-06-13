@@ -26,36 +26,48 @@
 						<div>Isi form dibawah ini secara lengkap.</div>
 						<div>
 							<div class="panel-body">
-								<form class="form-horizontal" action="/pengajuan-surat/apply" method="post">
+								<form id="pengajuan-surat" class="form-horizontal" action="/pengajuan-surat/apply" method="post">
 									@csrf
 									<fieldset>
 										<div class="form-group">
 											<label class="col-md-3 control-label" for="nama_mahasiswa">Nama</label>
 											<div class="col-md-6">
-												<input id="nama_mahasiswa" name="nama_mahasiswa" type="text" placeholder="" class="form-control">
+												<input id="nama_mahasiswa" name="nama_mahasiswa" type="text" placeholder="Isi dengan nama lengkap Anda. Contoh: Asep Hidayat Ramdani" class="form-control">
 											</div>
 										</div>
 									
 										<div class="form-group">
 											<label class="col-md-3 control-label" for="nim">NIM</label>
 											<div class="col-md-6">
-												<input id="nim" name="nim" type="text" placeholder="" class="form-control">
+												<input id="nim" name="nim" type="text" placeholder="Isi dengan Nomor Induk Mahasiswa Anda. Contoh: 1234050123" class="form-control">
 											</div>
 										</div>
 										
-										<div class="form-group">
+										<!-- <div class="form-group">
 											<label class="col-md-3 control-label" for="kode_prodi">Program Studi</label>
 											<div class="col-md-6">
 												<input id="kode_prodi" name="kode_prodi" type="text" placeholder="" class="form-control">
 											</div>
+										</div> -->
+										<div class="form-group">
+											<label class="col-md-3 control-label" for="kode_prodi">Program Studi</label>
+											<div class="col-md-6">
+											<select id="kode_prodi" name="kode_prodi" class="form-control" form="pengajuan-surat">
+												<option disabled selected hidden>Pilih Program Studi Anda</option>
+												<option value="401">Bimbingan Konseling Islam</option>
+												<option value="402">Komunikasi dan Penyiaran Islam</option>
+												<option value="403">Manajemen Dakwah</option>
+												<option value="404">Pengembangan Masyarakat Islam</option>
+												<option value="405">Ilmu Komunikasi Jurnalistik</option>
+												<option value="406">Ilmu Komunikasi Humas</option>
+											</select>
+											</div>
 										</div>
-
-										<input type="hidden" name="type" value="pkl">
 
 										<div class="form-group">
 											<label class="col-md-3 control-label" for="semester">Semester</label>
 											<div class="col-md-6">
-												<input id="semester" name="semester" type="text" placeholder="" class="form-control">
+												<input id="semester" name="semester" type="text" placeholder="Isi dengan semester yang Anda jalani. Contoh: VIII" class="form-control">
 											</div>
 										</div>
 
@@ -66,7 +78,7 @@
 													<div class="input-group-addon">
 														<span class="glyphicon glyphicon-th"></span>
 													</div>
-													<input id="tanggal_lahir" placeholder="yyyy/mm/dd" type="text" class="form-control datepicker" name="tanggal_lahir">
+													<input id="tanggal_lahir" placeholder="1970-01-01" type="text" class="form-control datepicker" name="tanggal_lahir">
 												</div>
 											</div>
 										</div>
@@ -74,14 +86,14 @@
 										<div class="form-group">
 											<label class="col-md-3 control-label" for="alamat">Alamat</label>
 											<div class="col-md-6">
-												<textarea class="form-control" id="alamat" name="alamat" placeholder="" rows="5"></textarea>
+												<textarea class="form-control" id="alamat" name="alamat" placeholder="Masukkan alamat Anda tinggal sekarang" rows="5"></textarea>
 											</div>
 										</div>
 
 										<div class="form-group">
 											<label class="col-md-3 control-label" for="no_telepon">Telepon</label>
 											<div class="col-md-6">
-												<input id="no_telepon" name="no_telepon" type="text" placeholder="" class="form-control">
+												<input id="no_telepon" name="no_telepon" type="text" placeholder="Masukkan nomor telepon yang dapat dihubungi" class="form-control">
 											</div>
 										</div>
 										@yield('detail-form')
@@ -91,7 +103,7 @@
 												<button type="submit" class="btn btn-primary btn-md pull-right">Submit</button>
 											</div>
 											<div class="col-md-6 widget-right">
-												<button type="clear" class="btn btn-danger btn-md pull-left">Reset</button>
+												<button type="reset" class="btn btn-danger btn-md pull-left">Reset</button>
 											</div>
 										</div>
 									</fieldset>

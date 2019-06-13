@@ -22,8 +22,8 @@ class LetterController extends Controller
             'no_telepon' => $request->no_telepon
         ]);
 
-        switch ($request->type) {
-            case 'pkl':
+        switch ($request->tipe_surat) {
+            case 'kerja-praktik':
                 $detail_pkl = new DetailPKL([
                     'mahasiswa_id' => $mahasiswa->id,
                     'nama_instansi' => $request->nama_instansi,
@@ -31,10 +31,25 @@ class LetterController extends Controller
                 ]);
                 $mahasiswa->detailPKL()->save($detail_pkl);
                 break;
-            case 'skkb':
+            case 'izin-penelitian':
                 # code...
                 break;
-            case 'izin-penelitian':
+            case 'aktif-kuliah':
+                # code...
+                break;
+            case 'izin-observasi':
+                # code...
+                break;
+            case 'keterangan-lulus':
+                # code...
+                break;
+            case 'masih-kuliah':
+                # code...
+                break;
+            case 'kelakuan-baik':
+                # code...
+                break;
+            case 'legalisir-ijazah':
                 # code...
                 break;
             

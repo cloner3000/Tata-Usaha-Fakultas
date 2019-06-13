@@ -3,6 +3,7 @@
 @section('page-title', 'Izin Observasi')
 
 @section('detail-form')
+<input type="hidden" name="tipe-surat" value="izin-observasi">
 <div class="form-group">
 	<label class="col-md-3 control-label" for="matkul">Mata Kuliah</label>
 	<div class="col-md-6">
