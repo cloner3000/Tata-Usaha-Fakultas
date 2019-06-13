@@ -51,7 +51,11 @@ class LetterController extends Controller
                 # code...
                 break;
             case 'kelakuan-baik':
-                # code...
+                $detail = new DetailSKKB([
+                    'mahasiswa_id' => $mahasiswa->id,
+                    'keperluan' => $request->lokasi_penelitian
+                ]);
+                $mahasiswa-detailSKKB()->save($detail);
                 break;
             case 'legalisir-ijazah':
                 # code...

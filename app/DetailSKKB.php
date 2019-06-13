@@ -8,6 +8,7 @@ class DetailSKKB extends Model
 {
     protected $table = "detail_skkb";
     protected $fillable = [
+        'mahasiswa_id',
         'keperluan'
     ];
 

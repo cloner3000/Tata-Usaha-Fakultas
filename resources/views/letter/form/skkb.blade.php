@@ -5,9 +5,9 @@
 @section('detail-form')
 <input type="hidden" name="tipe_surat" value="kelakuan-baik">
 <div class="form-group">
-	<label class="col-md-3 control-label" for="kpr_sak">Untuk Keperluan</label>
+	<label class="col-md-3 control-label" for="keperluan">Untuk Keperluan</label>
 	<div class="col-md-6">
-		<textarea class="form-control" id="kpr_sak" name="kpr_sak" placeholder="" rows="5"></textarea>
+		<textarea class="form-control" id="keperluan" name="keperluan" placeholder="" rows="5"></textarea>
 	</div>
 </div>
 @endsection
