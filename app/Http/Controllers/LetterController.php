@@ -4,8 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use App\Mahasiswa;
-use App\DetailPKL;
+use App\{Mahasiswa, DetailSKKB, DetailIzinPenelitian, DetailPKL};
 
 class LetterController extends Controller
 {
@@ -24,15 +23,20 @@ class LetterController extends Controller
 
         switch ($request->tipe_surat) {
             case 'kerja-praktik':
-                $detail_pkl = new DetailPKL([
+                $detail = new DetailPKL([
                     'mahasiswa_id' => $mahasiswa->id,
                     'nama_instansi' => $request->nama_instansi,
                     'alamat_instansi' => $request->alamat_instansi
                 ]);
-                $mahasiswa->detailPKL()->save($detail_pkl);
+                $mahasiswa->detailPKL()->save($detail);
                 break;
             case 'izin-penelitian':
-                # code...
+                $detail = new DetailIzinPenelitian([
+                    'mahasiswa_id' => $mahasiswa->id,
+                    'lokasi_penelitian' => $request->lokasi_penelitian,
+                    'alamat_lokasi' => $request->alamat_lokasi
+                ]);
+                $mahasiswa->detailIzinPenelitian()->save($detail);
                 break;
             case 'aktif-kuliah':
                 # code...

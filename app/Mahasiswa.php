@@ -21,4 +21,8 @@ class Mahasiswa extends Model
     {
         return $this->hasOne('App\DetailPKL');
     }
+    public function detailIzinPenelitian()
+    {
+        return $this->hasOne('App\DetailIzinPenelitian');
+    }
 }

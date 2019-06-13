@@ -6,8 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class DetailIzinPenelitian extends Model
 {
-    protected $table = "detail_pkl";
+    protected $table = "detail_izin_penelitian";
     protected $fillable = [
+        'mahasiswa_id',
         'lokasi_penelitian',
         'alamat_lokasi'
     ];
