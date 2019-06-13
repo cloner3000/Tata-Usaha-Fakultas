@@ -3,7 +3,7 @@
 @section('page-title', 'Keterangan Lulus')
 
 @section('detail-form')
-<input type="hidden" name="tipe-surat" value="keterangan-lulus">
+<input type="hidden" name="tipe_surat" value="keterangan-lulus">
 <div class="form-group">
 	<label class="col-md-3 control-label" for="tgl_lulus">Tanggal Lulus (Munaqosyah)</label>
 	<div class="col-md-6">

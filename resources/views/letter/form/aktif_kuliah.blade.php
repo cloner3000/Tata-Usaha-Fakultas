@@ -3,7 +3,7 @@
 @section('page-title', 'Aktif Kuliah')
 
 @section('detail-form')
-<input type="hidden" name="tipe-surat" value="aktif-kuliah">
+<input type="hidden" name="tipe_surat" value="aktif-kuliah">
 <div class="form-group">
 	<label class="col-md-3 control-label" for="keperluan">Untuk Keperluan</label>
 	<div class="col-md-6">

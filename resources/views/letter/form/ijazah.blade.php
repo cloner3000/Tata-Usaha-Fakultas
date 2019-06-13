@@ -3,7 +3,7 @@
 @section('page-title', 'Legalisir Ijazah/Transkrip Nilai')
 
 @section('detail-form')
-<input type="hidden" name="tipe-surat" value="legalisir-ijazah">
+<input type="hidden" name="tipe_surat" value="legalisir-ijazah">
 <div class="form-group">
 	<label class="col-md-3 control-label" for="tgl_sidang">Tanggal Sidang</label>
 	<div class="col-md-6">

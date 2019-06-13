@@ -3,7 +3,7 @@
 @section('page-title', 'Praktek Kerja Lapangan')
 
 @section('detail-form')
-<input type="hidden" name="tipe-surat" value="kerja-praktik">
+<input type="hidden" name="tipe_surat" value="kerja-praktik">
 
 <div class="form-group">
 	<label class="col-md-3 control-label" for="nama_instansi">Nama Instansi/Lembaga</label>
