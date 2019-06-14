@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use App\{Mahasiswa, DetailSKKB, DetailIzinPenelitian, DetailPKL};
+use App\{Mahasiswa, DetailSKKB, DetailIzinPenelitian, DetailPKL, DetailMasihKuliah};
 
 class LetterController extends Controller
 {
@@ -38,6 +38,16 @@ class LetterController extends Controller
                 ]);
                 $mahasiswa->detailIzinPenelitian()->save($detail);
                 break;
+            case 'masih-kuliah':
+                $detail = new DetailMasihKuliah([
+                    'mahasiswa_id' => $mahasiswa->id,
+                    'nama_orang_tua' => $request->nama_orang_tua,
+                    'nip_orang_tua' => $request->nip_orang_tua,
+                    'pangkat_golongan' => $request->pangkat_golongan,
+                    'nama_instansi' => $request->nama_instansi
+                ]);
+                $mahasiswa->detailMasihKuliah()->save($detail);
+                break;
             case 'aktif-kuliah':
                 # code...
                 break;
@@ -45,9 +55,6 @@ class LetterController extends Controller
                 # code...
                 break;
             case 'keterangan-lulus':
-                # code...
-                break;
-            case 'masih-kuliah':
                 # code...
                 break;
             case 'kelakuan-baik':
