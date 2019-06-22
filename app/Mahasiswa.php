@@ -27,10 +27,14 @@ class Mahasiswa extends Model
     }
     public function detailSKKB()
     {
-        return $this->hasOne('App\DetailIzinPenelitian');
+        return $this->hasOne('App\DetailSKKB');
     }
     public function detailMasihKuliah()
     {
         return $this->hasOne('App\DetailMasihKuliah');
+    }
+    public function detailIzinObservasi()
+    {
+        return $this->hasOne('App\DetailIzinObservasi');
     }
 }

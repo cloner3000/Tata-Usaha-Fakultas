@@ -52,7 +52,12 @@ class LetterController extends Controller
                 # code...
                 break;
             case 'izin-observasi':
-                # code...
+                $detail = new DetailMasihKuliah([
+                    'mahasiswa_id' => $mahasiswa->id,
+                    'mata_kuliah' => $request->mata_kuliah,
+                    'lokasi_observasi' => $request->lokasi_observasi
+                ]);
+                $mahasiswa->detailIzinObservasi()->save($detail);
                 break;
             case 'keterangan-lulus':
                 # code...
