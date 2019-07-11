@@ -17,24 +17,8 @@ class Mahasiswa extends Model
         'no_telepon'
     ];
 
-    public function detailPKL()
+    public function persuratan()
     {
-        return $this->hasOne('App\DetailPKL');
-    }
-    public function detailIzinPenelitian()
-    {
-        return $this->hasOne('App\DetailIzinPenelitian');
-    }
-    public function detailSKKB()
-    {
-        return $this->hasOne('App\DetailSKKB');
-    }
-    public function detailMasihKuliah()
-    {
-        return $this->hasOne('App\DetailMasihKuliah');
-    }
-    public function detailIzinObservasi()
-    {
-        return $this->hasOne('App\DetailIzinObservasi');
+        return $this->hasMany('App\Persuratan');
     }
 }

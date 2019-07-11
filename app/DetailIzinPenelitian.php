@@ -13,8 +13,8 @@ class DetailIzinPenelitian extends Model
         'alamat_lokasi'
     ];
 
-    public function mahasiswa()
+    public function persuratan()
     {
-        return $this->belongsTo('App\Mahasiswa');
+        return $this->belongsTo('App\Persuratan');
     }
 }

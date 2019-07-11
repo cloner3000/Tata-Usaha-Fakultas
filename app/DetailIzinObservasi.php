@@ -13,8 +13,8 @@ class DetailIzinObservasi extends Model
         'lokasi_observasi'
     ];
 
-    public function mahasiswa()
+    public function persuratan()
     {
-        return $this->belongsTo('App\Mahasiswa');
+        return $this->belongsTo('App\Persuratan');
     }
 }

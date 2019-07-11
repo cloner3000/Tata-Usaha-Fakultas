@@ -13,8 +13,8 @@ class DetailPKL extends Model
         'alamat_instansi'
     ];
 
-    public function mahasiswa()
+    public function persuratan()
     {
-        return $this->belongsTo('App\Mahasiswa');
+        return $this->belongsTo('App\Persuratan');
     }
 }

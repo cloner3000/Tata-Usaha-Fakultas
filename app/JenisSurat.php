@@ -11,4 +11,9 @@ class JenisSurat extends Model
         'kode surat',
         'jenis_surat'
     ];
+
+    public function persuratan()
+    {
+        return $this->hasMany('App\Persuratan');
+    }
 }
