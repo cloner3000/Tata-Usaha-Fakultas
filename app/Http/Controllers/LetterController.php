@@ -21,7 +21,8 @@ class LetterController extends Controller
             'no_telepon' => $request->no_telepon
         ]);
 
-        switch ($request->tipe_surat) {
+        switch ($request->tipe_surat)
+        {
             case 'kerja-praktik':
                 $detail = new DetailPKL([
                     'mahasiswa_id' => $mahasiswa->id,
