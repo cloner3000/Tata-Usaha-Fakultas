@@ -15,13 +15,8 @@ class CreateDetailSKKBSTable extends Migration
     {
         Schema::create('detail_skkb', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('mahasiswa_id');
             $table->string('keperluan', 50);
             $table->timestamps();
-
-            $table->foreign('mahasiswa_id')
-                ->references('id')->on('mahasiswa')
-                ->onDelete('cascade');
         });
     }
 

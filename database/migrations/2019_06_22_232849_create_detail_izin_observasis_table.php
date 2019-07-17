@@ -15,7 +15,6 @@ class CreateDetailIzinObservasisTable extends Migration
     {
         Schema::create('detail_izin_observasi', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('mahasiswa_id');
             $table->string('mata_kuliah');
             $table->text('lokasi_observasi');
             $table->timestamps();

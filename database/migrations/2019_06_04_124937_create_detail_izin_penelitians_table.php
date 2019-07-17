@@ -15,14 +15,9 @@ class CreateDetailIzinPenelitiansTable extends Migration
     {
         Schema::create('detail_izin_penelitian', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('mahasiswa_id');
             $table->string('lokasi_penelitian', 100);
             $table->text('alamat_lokasi');
             $table->timestamps();
-
-            $table->foreign('mahasiswa_id')
-                ->references('id')->on('mahasiswa')
-                ->onDelete('cascade');
         });
     }
 
